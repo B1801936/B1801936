@@ -1,0 +1,22 @@
+<?php
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the submitted username and password
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Replace this with your actual authentication logic (e.g., database query)
+    $validUsername = "your_valid_username";
+    $validPassword = "your_valid_password";
+
+    // Check if the submitted credentials are valid
+    if ($username === $validUsername && $password === $validPassword) {
+        // Authentication successful
+        // You can redirect the user to a different page or display a welcome message here
+        echo "Login successful! Welcome, $username!";
+    } else {
+        // Authentication failed
+        echo "Invalid username or password. Please try again.";
+    }
+}
+?>
