@@ -13,7 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($username === $validUsername && $password === $validPassword) {
         // Authentication successful
         // You can redirect the user to a different page or display a welcome message here
-        echo "Login successful! Welcome, $username!";
+        header("Location: Dashboard.php");
+        exit();
     } else {
         // Authentication failed
         echo "Invalid username or password. Please try again.";
